@@ -8,10 +8,10 @@ pragma solidity ^0.8.20;
  * Intended for deployment to Celo testnet (e.g., Alfajores or Celo Sepolia).
  *
  * Key features:
- * - Owner-controlled minting to prevent unauthorized NFT creation.
+ * - Owner controlled minting to prevent unauthorized NFT creation.
  * - Uses OpenZeppelin libraries for security and standardization.
  * - Emits events for transparency.
- * - Follows checks-effects-interactions pattern.
+ * - Follows checks effects-interactions pattern.
  *
  * Example usage in Foundry script:
  * ```solidity
