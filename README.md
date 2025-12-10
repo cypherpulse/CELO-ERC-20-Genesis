@@ -93,16 +93,46 @@ Run with verbosity:
 forge test -vv
 ```
 
-### Deployment
+### Deployment Scripts
 
-Deploy to Celo Sepolia testnet:
+We provide automated scripts for easy deployment:
+
+**Testnet Deployment** (Celo Sepolia):
 ```bash
-forge script script/DeployCeloLearningNFT.s.sol \
-  --rpc-url $CELO_SEPOLIA_RPC_URL \
-  --keystore <path-to-keystore> \
-  --broadcast \
-  --verify
+./deploy-testnet.sh
 ```
+
+**Mainnet Deployment** (Celo Mainnet - USE WITH CAUTION):
+```bash
+./deploy-mainnet.sh
+```
+
+These scripts handle:
+- Environment loading
+- Keystore validation
+- Contract deployment
+- Automatic verification on CeloScan/Blockscout
+
+**Prerequisites for scripts**:
+- `.env` file with required variables
+- Keystores set up (`defaultKey` for testnet, `celoKey` for mainnet)
+- Run with bash: `bash deploy-testnet.sh` (on Windows)
+
+## 🏗 Deployed Contracts
+
+### Celo Mainnet
+- **Contract Address**: `0xAFA53a1315157f750B9469c90B7404884B1C7a3A`
+- **Network**: Celo Mainnet (Chain ID: 42220)
+- **Explorer**: [CeloScan](https://celoscan.io/address/0xAFA53a1315157f750B9469c90B7404884B1C7a3A)
+- **Deployment**: Verified and ready for production use
+
+### Celo Sepolia Testnet
+- **Contract Address**: `0x6166b14fd8194CBBf466ECDFf957783352518aD7`
+- **Network**: Celo Sepolia (Chain ID: 62320)
+- **Explorer**: [Blockscout](https://celo-sepolia.blockscout.com/address/0x6166b14fd8194CBBf466ECDFf957783352518aD7)
+- **Deployment**: Verified for testing
+
+*Note: Contract addresses are public and can be used for interaction. Always verify addresses on official explorers before use.*
 
 ### Interacting with the Contract
 
